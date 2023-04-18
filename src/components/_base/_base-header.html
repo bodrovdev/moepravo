@@ -21,11 +21,51 @@
 <body>
 
   <header class="page-header">
-    <nav class="main-nav">
-      <div class="main-nav__container base-container">
-        <button class="main-nav__burger base-button follow-change" id="burger">
-          <span class="main-nav__burger-line"></span>
-        </button>
+    <div class="header__inline">
+      <div class="header__inline-container base-container">
+        <div class="header__inline-burger">
+          <button class="main-nav__burger base-button" id="burger">
+            <span class="main-nav__burger-line"></span>
+          </button>
+          <span class="header__burger-caption">Меню</span>
+        </div>
+        <button class="header__inline__callback main-button base-button" type="button"></button>
       </div>
-    </nav>
+    </div>
+    <div class="header__nav">
+      <nav class="header__main-nav">
+        <ul class="header__nav-list base-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link base-link" href="#"></a>
+            <a class="header__nav-link base-link" href="#"></a>
+            <a class="header__nav-link base-link" href="#"></a>
+            <a class="header__nav-link base-link" href="#"></a>
+          </li>
+        </ul>
+
+        <div class="header__nav-info">
+          <div class="header__info-item">
+            <span class="header__info-label"></span>
+            <a class="header__info-content base-link" href="#"></a>
+          </div>
+          <div class="header__info-item">
+            <span class="header__info-label"></span>
+            <a class="header__info-content base-link" href="#"></a>
+          </div>
+          <div class="header__info-item">
+            <span class="header__info-label"></span>
+            <p class="header__info-content base-par"></p>
+          </div>
+        </div>
+      </nav>
+
+      <figure class="header__nav-graphic base-figure">
+        <div class="header__graphic-line"></div>
+        <div class="header__graphic-line"></div>
+        <div class="header__graphic-line"></div>
+        <div class="header__graphic-line"></div>
+        <div class="header__graphic-line"></div>
+      </figure>
+    </div>
+
   </header>
