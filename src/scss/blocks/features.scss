@@ -1,0 +1,9 @@
+@use "../mixins";
+
+.features {
+  height: 100vh;
+  background-color: var(--color-white);
+  border-radius: 49px 49px 0 0;
+
+  padding: 90px 0 90px 0;
+}

@@ -13,11 +13,11 @@ burger.addEventListener('click', () => {
 
   burger.classList.contains('main-nav__burger--active') ?
     (function () {
-      // lock(mobile_menu);
+      lock(document.querySelector('.page-header__main-nav'));
       burger_caption.textContent = 'Закрыть';
     }()) :
     (function () {
-      // unlock(mobile_menu);
+      unlock(document.querySelector('.page-header__main-nav'));
       burger_caption.textContent = 'Меню';
     }())
 })
