@@ -104,8 +104,8 @@
     align-items: center;
     justify-content: flex-start;
 
-    width: 28px;
-    height: 20px;
+    width: 34px;
+    height: 24px;
     outline: none;
     border: none;
 
@@ -115,8 +115,8 @@
   &__burger-line {
     position: relative;
 
-    width: 15px;
-    height: 2px;
+    width: 34px;
+    height: 4px;
     background-color: var(--color-white);
     border-radius: 5px;
 
@@ -125,12 +125,12 @@
     &::before {
       content: '';
       position: absolute;
-      top: 8px;
+      top: 6px;
       left: 50%;
       transform: translateX(-50%);
 
-      width: 28px;
-      height: 2px;
+      width: 34px;
+      height: 4px;
       background-color: var(--color-white);
       border-radius: 5px;
 
@@ -140,18 +140,18 @@
 
       transition: all 0.4s;
 
-      margin: 0 0 0 7px;
+      // margin: 0 0 0 7px;
     }
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 8px;
+      bottom: 6px;
       left: 50%;
       transform: translateX(-50%);
 
-      width: 28px;
-      height: 2px;
+      width: 34px;
+      height: 4px;
       background-color: var(--color-white);
       border-radius: 5px;
 
@@ -161,7 +161,7 @@
 
       transition: all 0.4s;
 
-      margin: 0 0 0 7px;
+      // margin: 0 0 0 7px;
     }
   }
 

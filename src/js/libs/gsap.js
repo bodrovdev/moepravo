@@ -1,8 +1,6 @@
 import { gsap } from "gsap";
 import { lock, unlock } from 'tua-body-scroll-lock'
 
-// --- Анимация меню на главной странице
-
 
 // --- Следяющий за курсором элемент
 // let circle = document.getElementById('circle_follow');

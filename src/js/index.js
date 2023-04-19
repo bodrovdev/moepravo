@@ -2,17 +2,24 @@ import { lock, unlock } from 'tua-body-scroll-lock'
 
 // --- Мобильное меню
 let burger = document.getElementById('burger');
-let menu_graphic = document.querySelector('.header__nav-graphic');
-console.log(menu_graphic);
+let burger_caption = document.querySelector('.page-header__burger-caption');
+
+let menu_nav = document.querySelector('.page-header__nav');
 
 // - Открытие по по клику на бургер
 burger.addEventListener('click', () => {
   burger.classList.toggle('main-nav__burger--active');
-  menu_graphic.classList.toggle('header__nav-graphic--active');
-  console.log(menu_graphic);
+  menu_nav.classList.toggle('page-header__nav--active');
 
-
-  // burger.classList.contains('main-nav__burger--active') ? lock(mobile_menu) : unlock(mobile_menu);
+  burger.classList.contains('main-nav__burger--active') ?
+    (function () {
+      // lock(mobile_menu);
+      burger_caption.textContent = 'Закрыть';
+    }()) :
+    (function () {
+      // unlock(mobile_menu);
+      burger_caption.textContent = 'Меню';
+    }())
 })
 
 // --- Бегущая строка
