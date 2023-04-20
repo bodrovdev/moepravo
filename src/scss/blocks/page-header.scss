@@ -61,9 +61,14 @@
     z-index: 2;
   }
 
+  &__nav {
+    pointer-events: none;
+  }
+
   &__main-nav {
     position: fixed;
-    top: 239px;
+    // top: 239px;
+    top: 50%;
     left: 50%;
 
     display: flex;
@@ -73,9 +78,9 @@
     width: 90%;
     min-height: 363px;
     opacity: 0;
-    pointer-events: all;
+    pointer-events: none;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
     transition: opacity 0.4s;
     transition-delay: 0s;
 
@@ -207,7 +212,16 @@
     }
   }
 
-  &__nav--active {
+  &--active {
+    // .page-header__inline {
+    //   -webkit-box-shadow: 0px 25px 10px 0px rgba(55, 101, 228, 0.2);
+    //   -moz-box-shadow: 0px 25px 10px 0px rgba(55, 101, 228, 0.2);
+    //   box-shadow: 0px 25px 10px 0px rgba(55, 101, 228, 0.2);
+    // }
+
+    .page-header__nav {
+      pointer-events: all;
+    }
 
     .page-header__main-nav {
       opacity: 1;

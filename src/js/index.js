@@ -4,12 +4,13 @@ import { lock, unlock } from 'tua-body-scroll-lock'
 let burger = document.getElementById('burger');
 let burger_caption = document.querySelector('.page-header__burger-caption');
 
-let menu_nav = document.querySelector('.page-header__nav');
+let page_header = document.querySelector('.page-header');
 
 // - Открытие по по клику на бургер
 burger.addEventListener('click', () => {
   burger.classList.toggle('main-nav__burger--active');
-  menu_nav.classList.toggle('page-header__nav--active');
+  page_header.classList.toggle('page-header--active');
+  document.body.classList.toggle('scrollbar-hidden');
 
   burger.classList.contains('main-nav__burger--active') ?
     (function () {
@@ -38,3 +39,6 @@ window.addEventListener('load', () => {
     });
   }
 })
+
+// --- Скругление текста вокруг ссылки
+new CircleType(document.querySelector('.features__item-link'));

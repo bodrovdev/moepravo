@@ -26,8 +26,7 @@ body {
 
 	width: 100%;
 	min-height: 100vh;
-	overflow: auto !important;
-	background-color: var(--color-black);
+	// background-color: var(--color-black);
 
 	font-family: var(--font-family-default);
 	color: var(--color-white);
@@ -59,6 +58,33 @@ input[type=number] {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--color-white);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-royal-blue);
+}
+
+.scrollbar-hidden {
+	// overflow-y: scroll !important;
+
+	scrollbar-width: none !important;
+	/* Firefox */
+	-ms-overflow-style: none !important;
+	/* IE 10+ */
+
+	&::-webkit-scrollbar {
+		background: transparent !important;
+		/* Chrome/Safari/Webkit */
+		width: 0px !important;
+	}
 }
 
 // .circle-container {
@@ -97,16 +123,4 @@ input[type=number] {
 // 	transition: width 0.3s, height 0.3s, background-color 0.3s, border 0.3s;
 
 // 	z-index: 1000;
-// }
-
-// ::-webkit-scrollbar {
-// 	width: 5px;
-// }
-
-// ::-webkit-scrollbar-track {
-// 	background-color: var(--color-golden-fizz);
-// }
-
-// ::-webkit-scrollbar-thumb {
-// 	background-color: var(--color-aqua-deep);
 // }
