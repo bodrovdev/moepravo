@@ -41,4 +41,22 @@ window.addEventListener('load', () => {
 })
 
 // --- Скругление текста вокруг ссылки
-new CircleType(document.querySelector('.features__item-link'));
+// new CircleType(document.querySelector('.features__item-link'));
+
+// --- Анимация в блоке последних дел
+window.addEventListener('load', () => {
+  if (document.querySelector('.cases') === null) {
+    return;
+  }
+  else {
+    let featured_cases = document.querySelectorAll('.cases__featured-item');
+    featured_cases.forEach((item) => {
+      item.addEventListener('mouseover', () => {
+        if (!item.classList.contains('cases__featured-item--active')) {
+          featured_cases.forEach((value) => { value.classList.remove(('cases__featured-item--active')) })
+          item.classList.add('cases__featured-item--active');
+        }
+      })
+    })
+  }
+})
