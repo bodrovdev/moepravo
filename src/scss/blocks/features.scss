@@ -37,7 +37,6 @@
   &__item {
     position: relative;
 
-    background-color: var(--color-woodsmoke);
     overflow: hidden;
     border-radius: 8px;
 
@@ -46,27 +45,34 @@
     &--small {
       width: 306px;
       height: 303px;
+      background-image: -webkit-image-set(url("../img/image/features-small-item-bg.png") 1x);
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-        opacity: 70%;
-        background-image: -webkit-image-set(url("../img/image/heading-background.png") 1x);
-
-        @supports (background-image: -webkit-image-set(url("../img/image/heading-background.webp") 1x)) {
-          background-image: -webkit-image-set(url("../img/image/heading-background.webp") 1x);
-        }
-
-        background-size: contain;
-        mix-blend-mode: soft-light;
-
-        z-index: 2;
+      @supports (background-image: -webkit-image-set(url("../img/image/features-small-item-bg.webp") 1x)) {
+        background-image: -webkit-image-set(url("../img/image/features-small-item-bg.webp") 1x);
       }
+
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+
+      //   width: 100%;
+      //   height: 100%;
+      //   background-image: -webkit-image-set(url("../img/image/features-small-item-bg.png") 1x);
+
+      //   @supports (background-image: -webkit-image-set(url("../img/image/features-small-item-bg.webp") 1x)) {
+      //     background-image: -webkit-image-set(url("../img/image/features-small-item-bg.webp") 1x);
+      //   }
+
+      //   background-size: cover;
+      //   background-repeat: no-repeat;
+
+      //   z-index: 2;
+      // }
 
 
       &:nth-child(1) {
@@ -95,6 +101,7 @@
 
       width: 966px;
       height: 304px;
+      background-color: var(--color-woodsmoke);
 
       & .features__item-text {
         display: inline-block;

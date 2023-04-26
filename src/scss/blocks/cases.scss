@@ -164,4 +164,15 @@
   &__item-link {
     margin: auto 0 0 0;
   }
+
+  &__archive {
+    margin: 50px 0 0 0;
+
+    &-title {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+      color: var(--color-white);
+    }
+  }
 }

@@ -3,10 +3,18 @@
 .about {
   position: relative;
 
-  background-color: var(--color-royal-blue);
+  // background-color: var(--color-royal-blue);
   // height: 100vh;
   min-height: 763px;
   // max-height: 763px;
+  background-image: -webkit-image-set(url("../img/image/about-bg.png") 1x);
+
+  @supports (background-image: -webkit-image-set(url("../img/image/about-bg.webp") 1x)) {
+    background-image: -webkit-image-set(url("../img/image/about-bg.webp") 1x);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 49px 49px 0 0;
   overflow: hidden;
 
@@ -18,26 +26,26 @@
     padding: 45px 0;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
 
-    width: 100%;
-    height: 100%;
-    opacity: 50%;
-    background-image: -webkit-image-set(url("../img/image/heading-background.png") 1x);
+  //   width: 100%;
+  //   height: 100%;
+  //   opacity: 50%;
+  //   background-image: -webkit-image-set(url("../img/image/heading-background.png") 1x);
 
-    @supports (background-image: -webkit-image-set(url("../img/image/heading-background.webp") 1x)) {
-      background-image: -webkit-image-set(url("../img/image/heading-background.webp") 1x);
-    }
+  //   @supports (background-image: -webkit-image-set(url("../img/image/heading-background.webp") 1x)) {
+  //     background-image: -webkit-image-set(url("../img/image/heading-background.webp") 1x);
+  //   }
 
-    background-size: contain;
-    mix-blend-mode: soft-light;
+  //   background-size: contain;
+  //   mix-blend-mode: soft-light;
 
-    z-index: -1;
-  }
+  //   z-index: -1;
+  // }
 
   &__container {
     display: flex;
