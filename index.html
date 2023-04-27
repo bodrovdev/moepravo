@@ -24,11 +24,13 @@
 
     <div class="page-header__inline">
       <div class="page-header__inline-container base-container">
-        <div class="page-header__inline-burger">
-          <button class="main-nav__burger base-button" id="burger">
+        <div class="page-header__inline-burger" id="burger">
+          <button class="main-nav__burger base-button">
             <span class="main-nav__burger-line"></span>
           </button>
-          <span class="page-header__burger-caption">Меню</span>
+          <div class="page-header__caption-wrapper">
+            <span class="page-header__burger-caption" data-burger-caption="Закрыть">Меню</span>
+          </div>
         </div>
         <button class="page-header__inline-callback page-button base-button" type="button">Консультация</button>
       </div>
@@ -37,7 +39,7 @@
     <div class="page-header__nav">
       <nav class="page-header__main-nav">
         <ul class="page-header__nav-list base-list">
-          <li class="page-header__nav-item current_page_item  ">
+          <li class="page-header__nav-item current_page_item ">
             <a class="page-header__nav-link base-link" href="#">Главная</a>
           </li>
           <li class="page-header__nav-item">
