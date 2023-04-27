@@ -1,0 +1,30 @@
+@use "../mixins";
+
+.cube {
+  position: absolute;
+
+  &__wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      background-image: -webkit-image-set(url("../img/image/cube.png") 1x);
+
+      @supports (background-image: -webkit-image-set(url("../img/image/cube.webp") 1x)) {
+        background-image: -webkit-image-set(url("../img/image/cube.webp") 1x);
+      }
+
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}

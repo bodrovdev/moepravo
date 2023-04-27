@@ -60,3 +60,51 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+//Селект
+window.addEventListener('load', () => {
+  if (document.querySelector('#select') === null) {
+    return;
+  }
+  else {
+    const select = document.getElementById('select');
+    const select_shown = document.getElementById('select_shown');
+    const select_list = document.getElementById('select_list');
+    let select_items = select_list.querySelectorAll('.feedback__select-item');
+    const select_items_first = Array.from(select_items)[0];
+    const select_input = document.getElementById('city');
+
+    function selectItem(element, element_value) {
+      select_shown.textContent = element_value;
+      select_input.value = element_value;
+
+      select_items.forEach((item) => { item.classList.remove('feedback__select-item--selected') })
+
+      element.classList.add('feedback__select-item--selected');
+    }
+    selectItem(select_items_first, select_items_first.dataset.value);
+
+    select.addEventListener('click', () => {
+      document.querySelector('.feedback__select-arrow').classList.toggle('feedback__select-arrow--active');
+      select_list.classList.toggle('feedback__select-list--active');
+    })
+
+    select_list.addEventListener('click', (e) => {
+      switch (e.target.tagName) {
+        case 'SPAN':
+          selectItem(e.target.parentElement, e.target.parentElement.dataset.value);
+          break;
+
+        case 'LI':
+          selectItem(e.target, e.target.dataset.value);
+          break;
+      }
+    })
+
+    document.addEventListener('click', (e) => {
+      if (!select.contains(e.target)) {
+        select_list.classList.remove('feedback__select-list--active');
+      }
+    })
+  }
+});

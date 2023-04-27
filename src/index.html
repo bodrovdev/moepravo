@@ -3,26 +3,23 @@
 <main class="page-content">
   <section class="heading">
 
-    <!-- <div class="heading__graphic-circle heading__graphic-circle--1"></div>
-    <div class="heading__graphic-circle heading__graphic-circle--2"></div>
-    <div class="heading__graphic-circle heading__graphic-circle--3"></div> -->
-
     <div class="heading__container base-container">
       <div class="heading__content">
 
         <div class="heading__content-graphic">
+          <div class="heading__graphic-wrapper">
+            <svg class="heading__folder-icon" width="636" height="412" aria-hidden="true" alt="#">
+              <use href="img/icon/sprite.svg#folder-icon"></use>
+            </svg>
 
-          <svg class="heading__folder-icon" width="636" height="412" aria-hidden="true" alt="#">
-            <use href="img/icon/sprite.svg#folder-icon"></use>
-          </svg>
+            @@include('components/_bem/_cube.html')
+            @@include('components/_bem/_cube.html')
+            @@include('components/_bem/_cube.html')
+            @@include('components/_bem/_cube.html')
+            @@include('components/_bem/_cube.html')
 
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-
-          <a class="heading__graphic-link base-link" href="#"></a>
+            <a class="heading__graphic-link base-link" href="#"></a>
+          </div>
         </div>
 
         <h1 class="heading__content-title base-title">моёправо.рф</h1>
@@ -276,7 +273,9 @@
         </div>
       </section>
 
-      @@include('components/_bem/_feedback.html')6
+      @@include('components/_bem/_feedback.html')
+
+      @@include('components/_bem/_fake-footer.html')
 
     </div>
   </div>
