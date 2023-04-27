@@ -82,26 +82,33 @@
 <main class="page-content">
   <section class="heading">
 
-    <!-- <div class="heading__graphic-circle heading__graphic-circle--1"></div>
-    <div class="heading__graphic-circle heading__graphic-circle--2"></div>
-    <div class="heading__graphic-circle heading__graphic-circle--3"></div> -->
-
     <div class="heading__container base-container">
       <div class="heading__content">
 
         <div class="heading__content-graphic">
+          <div class="heading__graphic-wrapper">
+            <svg class="heading__folder-icon" width="636" height="412" aria-hidden="true" alt="#">
+              <use href="img/icon/sprite.svg#folder-icon"></use>
+            </svg>
 
-          <svg class="heading__folder-icon" width="636" height="412" aria-hidden="true" alt="#">
-            <use href="img/icon/sprite.svg#folder-icon"></use>
-          </svg>
+            <div class="cube">
+  <div class="cube__wrapper"></div>
+</div>
+            <div class="cube">
+  <div class="cube__wrapper"></div>
+</div>
+            <div class="cube">
+  <div class="cube__wrapper"></div>
+</div>
+            <div class="cube">
+  <div class="cube__wrapper"></div>
+</div>
+            <div class="cube">
+  <div class="cube__wrapper"></div>
+</div>
 
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-          <div class="heading__graphic-cube"></div>
-
-          <a class="heading__graphic-link base-link" href="#"></a>
+            <a class="heading__graphic-link base-link" href="#"></a>
+          </div>
         </div>
 
         <h1 class="heading__content-title base-title">моёправо.рф</h1>
@@ -362,12 +369,20 @@
       <input class="feedback__form-input" type="text" id="name" name="name" placeholder="Фамилия" required>
       <input class="feedback__form-input" type="text" id="second_name" name="second_name" placeholder="Имя" required>
       <input class="feedback__form-input" type="text" id="third_name" name="third_name" placeholder="Отчество" required>
-      <div class="feedback__form-select">
-        <div class="feedback__select-shown">
-          <ul class="feedback__select-list base-list">
-            <li class="feedback__select-item"></li>
-          </ul>
-        </div>
+      <div class="feedback__form-select" id="select">
+        <span class="feedback__select-label">Город</span>
+        <div class="feedback__select-content" id="select_shown"></div>
+        <ul class="feedback__select-list base-list" id="select_list">
+          <li class="feedback__select-item" data-value="Москва"><span class="feedback__item-text">Москва</span></li>
+          <li class="feedback__select-item" data-value="Таганрог"><span class="feedback__item-text">Таганрог</span></li>
+          <li class="feedback__select-item" data-value="Сызрань"><span class="feedback__item-text">Сызрань</span></li>
+          <li class="feedback__select-item" data-value="Бобруйск"><span class="feedback__item-text">Бобруйск</span></li>
+          <li class="feedback__select-item" data-value="Урюпинск"><span class="feedback__item-text">Урюпинск</span></li>
+          <li class="feedback__select-item" data-value="Норильск"><span class="feedback__item-text">Норильск</span></li>
+        </ul>
+        <svg class="feedback__select-arrow" width="9" height="5" aria-hidden="true" alt="#">
+          <use href="img/icon/sprite.svg#select-arrow-icon"></use>
+        </svg>
         <input class="feedback__form-input visually-hidden" type="text" id="city" name="city" required>
       </div>
       <input class="feedback__form-input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
@@ -377,14 +392,87 @@
       <button class="feedback__form-submit page-button page-button--blue base-button" type="submit">Отправить</button>
     </div>
   </form>
-</section>6
+</section>
+
+      <section class="fake-footer">
+  <div class="fake-footer__container base-container">
+    <div class="fake-footer__column fake-footer__column--left">
+      <div class="fake-footer__linkset">
+        <h3 class="fake-footer__title base-title">Услуги</h3>
+        <ul class="fake-footer__list base-list">
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Юридические консультации</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Представительство в суде</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Подготовка документов</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Корпоративное право</a>
+          </li>
+        </ul>
+      </div>
+      <div class="fake-footer__linkset">
+        <h3 class="fake-footer__title base-title">Информация</h3>
+        <ul class="fake-footer__list base-list">
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">О компании</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Архив дел</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Вакаснии</a>
+          </li>
+        </ul>
+      </div>
+      <div class="fake-footer__linkset">
+        <h3 class="fake-footer__title base-title">Мы в социальных сетях</h3>
+        <ul class="fake-footer__list base-list">
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Facebook</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Одноклассники</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Вконтакте</a>
+          </li>
+          <li class="fake-footer__list-item">
+            <a class="fake-footer__list-link base-link" href="#">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fake-footer__column fake-footer__column--right">
+      <div class="fake-footer__column-top">
+        <span class="fake-footer__upper-text">ГОТОВЫ СОТРУДНИЧАТЬ?</span>
+        <a class="fake-footer__feedback-link base-link" href="#">
+          <span class="fake-footer__link-text">КОНСУЛЬТАЦИЯ</span>
+          <svg class="fake-footer__link-icon" width="39" height="39" aria-hidden="true" alt="#">
+            <use href="img/icon/sprite.svg#feedback-arrow-icon"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="fake-footer__column-bottom">
+        <span class="fake-footer__copyright">© ЮРИСТЫ</span>
+        <a class="fake-footer__policy base-link" href="#">Политика конфиденциальности</a>
+        <a class="fake-footer__isart" href="#">
+          <span class="fake-footer__isart-text">Разработано</span>
+          <svg class="fake-footer__isart-icon" width="52" height="22" aria-hidden="true" alt="#">
+            <use href="img/icon/sprite.svg#isart-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     </div>
   </div>
 </main>
-
-<footer class="page-footer">
-</footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js" integrity="sha512-JHJv/L48s1Hod24iSI0u9bcF/JlUi+YaxliKdbasnw/U1Lp9xxWkaZ3O5OuQPMkVwOVXeFkF4n4176ouA6Py3A==" crossorigin="anonymous"
