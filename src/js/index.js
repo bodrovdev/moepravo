@@ -15,11 +15,11 @@ burger.addEventListener('click', () => {
   burger.classList.contains('main-nav__burger--active') ?
     (function () {
       lock(document.querySelector('.page-header__main-nav'));
-      burger_caption.textContent = 'Закрыть';
+      // burger_caption.textContent = 'Закрыть';
     }()) :
     (function () {
       unlock(document.querySelector('.page-header__main-nav'));
-      burger_caption.textContent = 'Меню';
+      // burger_caption.textContent = 'Меню';
     }())
 })
 

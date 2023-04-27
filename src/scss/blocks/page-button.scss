@@ -16,11 +16,29 @@
   line-height: 19px;
   color: var(--color-torea-bay);
 
+  transition: background-color 0.3s, color 0.1s;
+
   padding: 10px 50px;
+
+  &:hover {
+    background-color: var(--color-torea-bay);
+
+    color: var(--color-white);
+
+    transition: background-color 0.3s, color 0.1s;
+  }
 
   &--blue {
     background-color: var(--color-torea-bay);
 
     color: var(--color-white);
+
+    transition: background-color 0.3s, color 0.1s;
+
+    &:hover {
+      background-color: var(--color-royal-blue);
+
+      transition: background-color 0.3s;
+    }
   }
 }
