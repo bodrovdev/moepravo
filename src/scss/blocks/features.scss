@@ -37,6 +37,9 @@
   &__item {
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+
     overflow: hidden;
     border-radius: 8px;
 
@@ -44,7 +47,7 @@
 
     &--small {
       width: 306px;
-      height: 303px;
+      min-height: 303px;
       background-image: -webkit-image-set(url("../img/image/features-small-item-bg.png") 1x);
 
       @supports (background-image: -webkit-image-set(url("../img/image/features-small-item-bg.webp") 1x)) {
@@ -94,6 +97,12 @@
       &:nth-child(5) {
         grid-area: small-5;
       }
+
+      & .round-link {
+        position: relative;
+
+        align-self: flex-end;
+      }
     }
 
     &--big {
@@ -141,36 +150,14 @@
     }
 
     &-text {
+      display: inline-block;
+
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
       color: var(--color-white);
-    }
-  }
 
-  &__graphic-circle {
-    position: absolute;
-
-    z-index: 1;
-
-    &--1 {
-      left: -36px;
-      top: 76px;
-
-      width: 172px;
-      height: 172px;
-      background: rgba(185, 206, 234, 0.3);
-      filter: blur(72.5px);
-    }
-
-    &--2 {
-      left: 198px;
-      top: 188px;
-
-      width: 148px;
-      height: 148px;
-      background: #47768A;
-      filter: blur(72.5px);
+      margin: 0 0 31px 0;
     }
   }
 }

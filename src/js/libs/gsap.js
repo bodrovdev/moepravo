@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 import { lock, unlock } from 'tua-body-scroll-lock'
 
-
 // --- Следяющий за курсором элемент
 // let circle = document.getElementById('circle_follow');
 // function moveCircle(e) {

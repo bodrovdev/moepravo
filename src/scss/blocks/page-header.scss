@@ -120,9 +120,8 @@
 
     transform: translateX(-50%) translateY(-50%);
     transition: opacity 0.4s;
-    transition-delay: 0s;
 
-    z-index: 2;
+    z-index: 3;
   }
 
   @media(min-width: '1300px') {
@@ -219,6 +218,16 @@
 
     &:last-child {
       margin: 0;
+    }
+
+    & a {
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-torea-bay);
+
+        transition: color 0.3s;
+      }
     }
   }
 

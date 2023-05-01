@@ -41,7 +41,18 @@ window.addEventListener('load', () => {
 })
 
 // --- Скругление текста вокруг ссылки
-// new CircleType(document.querySelector('.features__item-link'));
+window.addEventListener('load', () => {
+  if (document.querySelectorAll('.round-link') === null) {
+    return;
+  }
+  else {
+    let round_links = document.querySelectorAll('.round-link__text');
+
+    round_links.forEach((link) => {
+      new CircleType(link);
+    })
+  }
+})
 
 // --- Анимация в блоке последних дел
 window.addEventListener('load', () => {
@@ -108,3 +119,18 @@ window.addEventListener('load', () => {
     })
   }
 });
+
+// --- Анимация в блоке преимуществ
+window.addEventListener('load', () => {
+  if (document.querySelector('.features') === null) {
+    return;
+  }
+  else {
+    let features_wrapper = document.querySelector('.features__wrapper');
+    features_wrapper.addEventListener('mouseover', (e) => {
+      if (e.target.contains('.features__item')) {
+
+      }
+    })
+  }
+})

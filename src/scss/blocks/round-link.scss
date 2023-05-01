@@ -1,0 +1,80 @@
+@use "../mixins";
+
+.round-link {
+  position: absolute;
+
+  display: inline-block;
+
+  width: 121px;
+  height: 121px;
+
+  &:hover {
+    & .round-link__inner-icon {
+      transform: rotate(0);
+      transition: transform 0.3s;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    width: 121px;
+    height: 121px;
+  }
+
+  @keyframes you_spin_me_round {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  &--active {}
+
+  &__text {
+    position: relative;
+
+    display: inline-block;
+
+    width: 121px;
+    max-width: 121px;
+    height: 121px;
+    max-height: 121px;
+
+    & div {
+      top: 50%;
+      left: 50%;
+
+      animation-name: you_spin_me_round;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      transform: translate(-50%, -50%), rotate(0);
+    }
+  }
+
+  &__inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-torea-bay);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &__inner-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+}
