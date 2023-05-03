@@ -20,6 +20,14 @@
 }
 
 .archive {
+
+  margin: 0 0 90px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     display: inline-block;
 
@@ -31,6 +39,10 @@
   &__list {
     display: flex;
     flex-direction: column;
+  }
+
+  &__wrapper {
+    margin: 0 0 20px 0;
   }
 
   &__list-item {
@@ -104,12 +116,27 @@
   }
 
   &__showmore {
-    width: 210px;
-    height: 39px;
-    left: 855px;
-    top: 846px;
-
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--color-white);
     border-radius: 36px;
+    cursor: pointer;
+
+    font-family: var(--font-family-second);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-white);
+
+    transition: background-color 0.3s, color 0.3s;
+
+    padding: 10px 50px;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: var(--color-white);
+
+      color: var(--color-black);
+
+      transition: background-color 0.3s, color 0.3s;
+    }
   }
 }

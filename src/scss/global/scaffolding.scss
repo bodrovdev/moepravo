@@ -73,18 +73,12 @@ input[type=number] {
 }
 
 .scrollbar-hidden {
-	// overflow-y: scroll !important;
-
-	scrollbar-width: none !important;
-	/* Firefox */
-	-ms-overflow-style: none !important;
-	/* IE 10+ */
-
-	&::-webkit-scrollbar {
-		background: transparent !important;
-		/* Chrome/Safari/Webkit */
-		width: 0px !important;
-	}
+	// scrollbar-width: none !important;
+	// -ms-overflow-style: none !important;
+	// &::-webkit-scrollbar {
+	// 	background: transparent !important;
+	// 	width: 0px !important;
+	// }
 }
 
 // .circle-container {
