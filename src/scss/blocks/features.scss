@@ -45,6 +45,14 @@
 
     padding: 35px 20px 20px 20px;
 
+    & .round-link {
+      position: relative;
+
+      align-self: flex-end;
+
+      margin: auto 0 0 0;
+    }
+
     &--small {
       width: 306px;
       min-height: 303px;
@@ -97,19 +105,13 @@
       &:nth-child(5) {
         grid-area: small-5;
       }
-
-      & .round-link {
-        position: relative;
-
-        align-self: flex-end;
-      }
     }
 
     &--big {
       grid-area: big;
 
       width: 966px;
-      height: 304px;
+      min-height: 304px;
       background-color: var(--color-woodsmoke);
 
       & .features__item-text {
@@ -133,10 +135,10 @@
           background-image: -webkit-image-set(url("../img/image/features-big-item-bg.webp") 1x);
         }
 
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
 
-        z-index: 2;
+        z-index: 0;
       }
     }
 

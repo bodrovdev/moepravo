@@ -1,0 +1,65 @@
+@use "../mixins";
+
+.contacts-content {
+  position: relative;
+
+  width: 100%;
+  min-height: 1225px;
+  background-image: -webkit-image-set(url("../img/image/contacts-background.png") 1x);
+
+  @supports (background-image: -webkit-image-set(url("../img/image/contacts-background.webp") 1x)) {
+    background-image: -webkit-image-set(url("../img/image/contacts-background.webp") 1x);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 117px 0 0 0;
+
+  z-index: 1;
+}
+
+.page-contacts {
+  overflow: hidden;
+
+  padding: 0 0 124px 0;
+
+  &__marquee {
+    display: inline-block;
+
+    font-family: var(--font-family-default);
+    font-weight: 600;
+    font-size: 130px;
+    line-height: 125px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-white);
+
+    transition: color 0.3s, -webkit-text-stroke-color 0.3s;
+
+    margin: 0 0 80px 0;
+
+    &:hover {
+      color: var(--color-royal-blue);
+      -webkit-text-stroke-color: var(--color-royal-blue);
+      transition: color 0.3s, -webkit-text-stroke-color 0.3s;
+    }
+  }
+
+  &__info-title {
+    display: inline-block;
+
+    max-width: 416px;
+
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 38px;
+    color: var(--color-white);
+
+    margin: 0 0 52px 0;
+
+    & .page-contacts__title-blue {
+      color: var(--color-royal-blue);
+    }
+  }
+}

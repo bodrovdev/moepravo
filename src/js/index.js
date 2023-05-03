@@ -15,24 +15,22 @@ burger.addEventListener('click', () => {
   burger.classList.contains('main-nav__burger--active') ?
     (function () {
       lock(document.querySelector('.page-header__main-nav'));
-      // burger_caption.textContent = 'Закрыть';
     }()) :
     (function () {
       unlock(document.querySelector('.page-header__main-nav'));
-      // burger_caption.textContent = 'Меню';
     }())
 })
 
 // --- Бегущая строка
 window.addEventListener('load', () => {
-  if (document.querySelector('#marquee') === null) {
+  if (document.querySelector('.marquee') === null) {
     return;
   }
   else {
     $(function () {
-      $('.marquee-1').marquee({
+      $('.marquee').marquee({
         delayBeforeStart: -5000,
-        duration: 20000,
+        duration: 90000,
         startVisible: true,
         duplicated: true
       });
@@ -46,10 +44,10 @@ window.addEventListener('load', () => {
     return;
   }
   else {
-    let round_links = document.querySelectorAll('.round-link__text');
+    let round_links = document.querySelectorAll('.round-link');
 
     round_links.forEach((link) => {
-      new CircleType(link);
+      new CircleType(link.querySelector('.round-link__text'));
     })
   }
 })
@@ -72,7 +70,7 @@ window.addEventListener('load', () => {
   }
 })
 
-//Селект
+// --- Селект
 window.addEventListener('load', () => {
   if (document.querySelector('#select') === null) {
     return;
@@ -90,7 +88,6 @@ window.addEventListener('load', () => {
       select_input.value = element_value;
 
       select_items.forEach((item) => { item.classList.remove('feedback__select-item--selected') })
-
       element.classList.add('feedback__select-item--selected');
     }
     selectItem(select_items_first, select_items_first.dataset.value);
@@ -119,18 +116,3 @@ window.addEventListener('load', () => {
     })
   }
 });
-
-// --- Анимация в блоке преимуществ
-window.addEventListener('load', () => {
-  if (document.querySelector('.features') === null) {
-    return;
-  }
-  else {
-    let features_wrapper = document.querySelector('.features__wrapper');
-    features_wrapper.addEventListener('mouseover', (e) => {
-      if (e.target.contains('.features__item')) {
-
-      }
-    })
-  }
-})

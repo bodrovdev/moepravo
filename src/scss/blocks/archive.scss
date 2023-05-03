@@ -1,0 +1,115 @@
+@use "../mixins";
+
+.archive-content {
+  position: relative;
+
+  width: 100%;
+  min-height: 1378px;
+  background-image: -webkit-image-set(url("../img/image/contacts-background.png") 1x);
+
+  @supports (background-image: -webkit-image-set(url("../img/image/contacts-background.webp") 1x)) {
+    background-image: -webkit-image-set(url("../img/image/contacts-background.webp") 1x);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 165px 0 0 0;
+
+  z-index: 1;
+}
+
+.archive {
+  &__title {
+    display: inline-block;
+
+    max-width: 613px;
+
+    margin: 0 0 40px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: #424444;
+    }
+
+    &:first-child {
+      padding: 15px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+        background-color: #424444;
+      }
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__item-name,
+  .archive__item-date,
+  .archive__item-button {
+    display: flex;
+    align-items: center;
+
+    width: 33%;
+  }
+
+
+  &__item-name {
+    justify-content: flex-start;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__item-date {
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__item-button {
+    justify-content: flex-end;
+  }
+
+  &__showmore {
+    width: 210px;
+    height: 39px;
+    left: 855px;
+    top: 846px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 36px;
+  }
+}

@@ -1,5 +1,15 @@
 @use "../mixins";
 
+@keyframes you_spin_me_round {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 .round-link {
   position: absolute;
 
@@ -22,18 +32,6 @@
     height: 121px;
   }
 
-  @keyframes you_spin_me_round {
-    0% {
-      transform: translate(-50%, -50%) rotate(0);
-    }
-
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
-
-  &--active {}
-
   &__text {
     position: relative;
 
@@ -48,11 +46,7 @@
       top: 50%;
       left: 50%;
 
-      animation-name: you_spin_me_round;
-      animation-duration: 6s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      transform: translate(-50%, -50%), rotate(0);
+      transform: translate(-50%, -50%) rotate(0);
     }
   }
 

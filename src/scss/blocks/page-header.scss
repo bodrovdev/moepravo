@@ -205,46 +205,6 @@
     }
   }
 
-  &__nav-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__info-item {
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 0 48px 0;
-
-    &:last-child {
-      margin: 0;
-    }
-
-    & a {
-      transition: color 0.3s;
-
-      &:hover {
-        color: var(--color-torea-bay);
-
-        transition: color 0.3s;
-      }
-    }
-  }
-
-  &__info-label {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 15px;
-
-    margin: 0 0 11px 0;
-  }
-
-  &__info-content {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 23px;
-  }
-
   &__nav-graphic {
     position: fixed;
     top: 0;

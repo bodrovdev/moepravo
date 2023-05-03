@@ -108,6 +108,13 @@
     & .round-link {
       left: 10px;
       bottom: 10px;
+
+      & .round-link__text div {
+        animation-name: you_spin_me_round;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
     }
   }
 
