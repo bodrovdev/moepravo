@@ -116,3 +116,20 @@ window.addEventListener('load', () => {
     })
   }
 });
+
+// --- Анимация на странице услуги
+window.addEventListener('load', () => {
+  if (document.querySelector('.single-services__features-item') === null) {
+    return;
+  }
+  else {
+    let services_items = document.querySelectorAll('.single-services__features-item');
+
+    services_items.forEach((item) => {
+      item.addEventListener('mouseover', (e) => {
+        services_items.forEach((value) => { value.classList.remove('single-services__features-item--active') });
+        item.classList.add('single-services__features-item--active');
+      })
+    })
+  }
+})

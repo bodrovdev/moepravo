@@ -26,7 +26,8 @@
 @use 'blocks/page-footer';
 
 @use 'blocks/main-nav';
-@use 'blocks/page-button';@use 'blocks/heading';
+@use 'blocks/page-button';
+@use 'blocks/heading';
 @use 'blocks/features';
 @use 'blocks/section-title';
 @use 'blocks/about';
@@ -39,4 +40,4 @@
 @use 'blocks/contacts-info';
 @use 'blocks/archive';
 @use 'blocks/single';
-@use 'blocks/single-services';
+@use 'blocks/single-services-heading';@use 'blocks/single-services-features';
