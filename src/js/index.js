@@ -2,8 +2,6 @@ import { lock, unlock } from 'tua-body-scroll-lock'
 
 // --- Мобильное меню
 let burger = document.getElementById('burger');
-let burger_caption = document.querySelector('.page-header__burger-caption');
-
 let page_header = document.querySelector('.page-header');
 
 // - Открытие по по клику на бургер
@@ -112,6 +110,7 @@ window.addEventListener('load', () => {
     document.addEventListener('click', (e) => {
       if (!select.contains(e.target)) {
         select_list.classList.remove('feedback__select-list--active');
+        document.querySelector('.feedback__select-arrow').classList.remove('feedback__select-arrow--active');
       }
     })
   }
@@ -133,3 +132,38 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// --- Табы на страницах услуг
+function singleTabs() {
+  if (document.querySelector('.single-services__tabs') === null) {
+    return;
+  }
+  else {
+    // - Анимация появления кнопок табов
+    let tabs_buttons = document.querySelectorAll('.single-services__tabs-button');
+
+    tabs_buttons.forEach((button_value) => {
+      button_value.setAttribute('data-aos', 'zoom-in');
+      button_value.setAttribute('data-aos-delay', `${Math.floor(Math.random() * (8 - 1 + 1) + 1)}00`);
+    })
+
+    // - Функционал табов
+    let tabs_content_items = document.querySelectorAll('.single-services__tabs-content-item');
+
+    tabs_buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        tabs_buttons.forEach((button_item) => { button_item.classList.remove('single-services__tabs-button--active') })
+        button.classList.add('single-services__tabs-button--active');
+
+        tabs_content_items.forEach((item) => {
+          if (button.dataset.tabs_button === item.dataset.tabs_content) {
+            tabs_content_items.forEach((value) => { value.classList.remove('single-services__tabs-content-item--active') });
+            item.classList.add('single-services__tabs-content-item--active');
+          }
+        })
+      })
+    })
+  }
+}
+
+singleTabs();

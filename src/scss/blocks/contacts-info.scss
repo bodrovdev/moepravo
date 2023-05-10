@@ -10,6 +10,10 @@
 
     margin: 0 0 48px 0;
 
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 20px 0;
+    }
+
     &:last-child {
       margin: 0;
     }
@@ -39,5 +43,11 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 23px;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 23px;
+    }
   }
 }

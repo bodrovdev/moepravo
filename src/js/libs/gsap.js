@@ -55,8 +55,7 @@ window.addEventListener('load', () => {
     // 4
     let img_4 = document.getElementById('serv-img-4');
     let img_4_tl = gsap.timeline({ repeat: -1 });
-    img_4_tl.add(gsap.to(img_4, { rotate: 360, duration: 60, ease: "none" }))
-    img_4_tl.add(gsap.to(img_4, { rotate: 0, duration: 4, ease: "none" }))
+    img_4_tl.add(gsap.to(img_4, { rotate: 360, duration: 30, ease: "none" }))
   }
 });
 
