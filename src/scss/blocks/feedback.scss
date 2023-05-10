@@ -62,6 +62,7 @@
 
     border-bottom: 1px solid var(--color-charade);
     outline: none;
+    cursor: pointer;
 
     font-family: var(--font-family-default);
     font-weight: 700;
@@ -70,6 +71,12 @@
     color: var(--color-charade);
 
     padding: 0 0 10px 0;
+
+    &:hover .feedback__select-content {
+      color: var(--color-royal-blue);
+
+      transition: color 0.3s;
+    }
   }
 
   &__select-label {
@@ -83,15 +90,17 @@
     margin: 0 0 10px 0;
   }
 
-  &__select-content {
+  &__select-content-wrapper {
     position: relative;
+  }
 
-    cursor: pointer;
-
+  &__select-content {
     font-weight: 700;
     font-size: 16px;
     line-height: 15px;
     color: var(--color-charade);
+
+    transition: color 0.3s;
   }
 
   &__select-list {
@@ -188,11 +197,11 @@
     width: 9px;
     height: 5px;
 
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(0);
     transition: transform 0.3s;
 
     &--active {
-      transform: translateY(-50%) rotate(0);
+      transform: translateY(-50%) rotate(180deg);
       transition: transform 0.3s;
     }
   }

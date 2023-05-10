@@ -1,0 +1,114 @@
+@use "../mixins";
+
+.single-services-bottom {
+  background-color: var(--color-royal-blue);
+
+  &__content {
+    min-height: 1890px;
+    background-image: -webkit-image-set(url("../img/image/tabs-bg.png") 1x);
+
+    @supports (background-image: -webkit-image-set(url("../img/image/tabs-bg.webp") 1x)) {
+      background-image: -webkit-image-set(url("../img/image/tabs-bg.webp") 1x);
+    }
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 49px 49px 0 0;
+    overflow: hidden;
+
+    padding: 90px 0;
+  }
+}
+
+.single-services__tabs {
+
+  &-container {
+    display: flex;
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+
+    &--right {
+      gap: 24px;
+    }
+
+    &-line {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      &:nth-child(1) {
+        justify-content: flex-start;
+      }
+
+      &:nth-child(2) {
+        justify-content: center;
+      }
+
+      &:nth-child(3) {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 196px;
+    height: 190px;
+    background-color: #1D2221;
+    border-radius: 50%;
+    cursor: pointer;
+
+    font-family: var(--font-family-default);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 19px;
+    color: var(--color-white);
+    text-align: center;
+
+    transition: outline 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+
+    padding: 5px;
+
+    z-index: 1;
+
+    &:hover {
+      outline: 6px solid var(--color-royal-blue);
+
+      transition: outline 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-royal-blue);
+      border-radius: 50%;
+
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      z-index: -1;
+    }
+
+    &--active {
+      pointer-events: none;
+
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+    }
+  }
+}

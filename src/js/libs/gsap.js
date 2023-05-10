@@ -35,29 +35,28 @@ window.addEventListener('load', () => {
     let img_3_3 = document.getElementById('serv-img-3-3');
 
     // 3-1
-    // let img_3_1_tl = gsap.timeline({ repeat: -1 });
-    // img_3_1_tl.add(gsap.to(img_3_1, { y: -50, rotate: 90, duration: 5, ease: "power3" }))
-    // img_3_1_tl.add(gsap.to(img_3_1, { y: 0, rotate: 0, duration: 5, ease: "power3" }))
-
     let img_3_1_tl = gsap.timeline({ repeat: -1 });
-    img_3_1_tl.add(gsap.to(img_3_1, { x: 101, duration: 0.5, ease: "none" }))
-    img_3_1_tl.add(gsap.to(img_3_1, { x: 101, duration: 0.5, ease: "none" }))
+    img_3_1_tl.add(gsap.to(img_3_1, { x: 280, duration: 10, ease: "linear", }));
+    img_3_1_tl.add(gsap.to(img_3_1, { zIndex: 4, duration: 0, }));
+    img_3_1_tl.add(gsap.to(img_3_1, { x: 0, duration: 10, ease: "linear" }));
 
     // 3-2
-    // let img_3_2_tl = gsap.timeline({ repeat: -1 });
-    // img_3_2_tl.add(gsap.to(img_3_2, { x: -50, rotate: -30, duration: 5, ease: "power3" }))
-    // img_3_2_tl.add(gsap.to(img_3_2, { x: 0, rotate: 0, duration: 5, ease: "power3" }))
+    let img_3_2_tl = gsap.timeline({ repeat: -1 });
+    img_3_2_tl.add(gsap.to(img_3_2, { y: -20, duration: 10, ease: "linear" }))
+    img_3_2_tl.add(gsap.to(img_3_2, { y: 0, duration: 10, ease: "linear" }))
 
     // 3-3
-    // let img_3_3_tl = gsap.timeline({ repeat: -1 });
-    // img_3_3_tl.add(gsap.to(img_3_3, { x: 50, rotate: -30, duration: 5, ease: "power3" }))
-    // img_3_3_tl.add(gsap.to(img_3_3, { x: 0, rotate: 0, duration: 5, ease: "power3" }))
+    let img_3_3_tl = gsap.timeline({ repeat: -1 });
+    img_3_3_tl.add(gsap.to(img_3_3, { zIndex: 4, duration: 0, }));
+    img_3_3_tl.add(gsap.to(img_3_3, { x: -230, duration: 6, ease: "linear", }));
+    img_3_3_tl.add(gsap.to(img_3_3, { zIndex: 1, duration: 0, }));
+    img_3_3_tl.add(gsap.to(img_3_3, { x: 0, duration: 6, ease: "linear" }));
 
     // 4
     let img_4 = document.getElementById('serv-img-4');
     let img_4_tl = gsap.timeline({ repeat: -1 });
-    img_4_tl.add(gsap.to(img_4, { rotate: 30, duration: 4, ease: "power2" }))
-    img_4_tl.add(gsap.to(img_4, { rotate: 0, duration: 4, ease: "power2" }))
+    img_4_tl.add(gsap.to(img_4, { rotate: 360, duration: 60, ease: "none" }))
+    img_4_tl.add(gsap.to(img_4, { rotate: 0, duration: 4, ease: "none" }))
   }
 });
 
