@@ -103,7 +103,7 @@
         </p>
         <ul class="single-services__features-wrapper base-list">
 
-          <li class="single-services__features-item">
+          <li class="single-services__features-item single-services__features-item--active">
             <div class="single-services__features-item-info">
               <h3 class="single-services__features-item-title base-title">Широкий спектр юридических вопросов.</h3>
               <p class="single-services__features-item-description base-par">
@@ -111,7 +111,7 @@
               </p>
             </div>
 
-            <!-- <picture class="single-services__features-item-picture">
+            <picture class="single-services__features-item-picture">
               <source type="image/webp" srcset="img/image/single-services-item-image-1.webp 1x">
               <img class="single-services__features-item-img" src="img/image/single-services-item-image-1.png" aria-hidden="true" alt="#">
             </picture>
@@ -119,10 +119,10 @@
             <picture class="single-services__features-item-picture">
               <source type="image/webp" srcset="img/image/single-services-item-image-2.webp 1x">
               <img class="single-services__features-item-img" src="img/image/single-services-item-image-2.png" aria-hidden="true" alt="#">
-            </picture> -->
+            </picture>
           </li>
 
-          <li class="single-services__features-item single-services__features-item--active">
+          <li class="single-services__features-item">
             <div class="single-services__features-item-info">
               <h3 class="single-services__features-item-title base-title">Широкий спектр юридических вопросов.</h3>
               <p class="single-services__features-item-description base-par">
@@ -140,10 +140,10 @@
               <img class="single-services__features-item-img" src="img/image/single-services-item-image-3.png" width="202" height="202" aria-hidden="true" alt="#" id="serv-img-3-2">
             </picture>
 
-            <!-- <picture class="single-services__features-item-picture">
+            <picture class="single-services__features-item-picture">
               <source type="image/webp" srcset="img/image/single-services-item-image-3.webp 1x">
               <img class="single-services__features-item-img" src="img/image/single-services-item-image-3.png" width="33" height="33" aria-hidden="true" alt="#" id="serv-img-3-3">
-            </picture> -->
+            </picture>
           </li>
 
           <li class="single-services__features-item">
@@ -165,7 +165,39 @@
     </div>
   </section>
 
-  <section class="fake-footer">
+  <div class="single-services-bottom">
+    <div class="single-services-bottom__content">
+
+      <section class="single-services__tabs">
+        <div class="single-services__tabs-container base-container">
+          <div class="single-services__tabs-column single-services__tabs-column--left">
+            <h2 class="single-services__tabs-title section-title base-title">Принципы нашей работы</h2>
+            <div class="single-services__tabs-content">
+              <h3 class="single-services__tabs-content-title base-title"></h3>
+              <span class="single-services__tabs-content-text base-par"></span>
+            </div>
+          </div>
+          <div class="single-services__tabs-column single-services__tabs-column--right">
+            <div class="single-services__tabs-column-line">
+              <button class="single-services__tabs-button base-button" type="button" data-tabs-button="1">Цены</button>
+              <button class="single-services__tabs-button single-services__tabs-button--active base-button" type="button" data-tabs-button="2">Качество</button>
+            </div>
+            <div class="single-services__tabs-column-line">
+              <button class="single-services__tabs-button base-button" type="button" data-tabs-button="3">Безопасность</button>
+              <button class="single-services__tabs-button base-button" type="button" data-tabs-button="4">Приоритеты</button>
+              <button class="single-services__tabs-button base-button" type="button" data-tabs-button="5">Специалисты</button>
+            </div>
+            <div class="single-services__tabs-column-line">
+              <button class="single-services__tabs-button base-button" type="button" data-tabs-button="6">Подход</button>
+              <button class="single-services__tabs-button base-button" type="button" data-tabs-button="7">Выбор</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="fake-footer">
   <div class="fake-footer__container base-container">
     <div class="fake-footer__column fake-footer__column--left">
       <div class="fake-footer__linkset">
@@ -240,6 +272,9 @@
     </div>
   </div>
 </section>
+  </div>
+
+
 </main>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

@@ -253,7 +253,7 @@
         <p class="about__desc-text base-par">
           Мы предоставляем высококачественные юридические услуги с гарантией конфиденциальности. Наша команда - юристы и специалисты в различных областях права, готовые помочь в любых вопросах.
         </p>
-        <a class="about__desc-link page-button base-link" href="#">Больше о компании</a>
+        <!-- <a class="about__desc-link page-button base-link" href="#">Больше о компании</a> -->
       </div>
       <div class="about__wrapper">
         <div class="about__wrapper-item">
@@ -424,7 +424,13 @@
       <input class="feedback__form-input" type="text" id="third_name" name="third_name" placeholder="Отчество" required>
       <div class="feedback__form-select" id="select">
         <span class="feedback__select-label">Город</span>
-        <div class="feedback__select-content" id="select_shown"></div>
+        <div class="feedback__select-content-wrapper">
+          <div class="feedback__select-content" id="select_shown"></div>
+          <svg class="feedback__select-arrow" width="9" height="5" aria-hidden="true" alt="#">
+            <use href="img/icon/sprite.svg#select-arrow-icon"></use>
+          </svg>
+        </div>
+
         <ul class="feedback__select-list base-list" id="select_list">
           <li class="feedback__select-item" data-value="Москва"><span class="feedback__item-text">Москва</span></li>
           <li class="feedback__select-item" data-value="Таганрог"><span class="feedback__item-text">Таганрог</span></li>
@@ -433,9 +439,7 @@
           <li class="feedback__select-item" data-value="Урюпинск"><span class="feedback__item-text">Урюпинск</span></li>
           <li class="feedback__select-item" data-value="Норильск"><span class="feedback__item-text">Норильск</span></li>
         </ul>
-        <svg class="feedback__select-arrow" width="9" height="5" aria-hidden="true" alt="#">
-          <use href="img/icon/sprite.svg#select-arrow-icon"></use>
-        </svg>
+
         <input class="feedback__form-input visually-hidden" type="text" id="city" name="city" required>
       </div>
       <input class="feedback__form-input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
