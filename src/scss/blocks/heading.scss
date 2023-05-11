@@ -136,6 +136,10 @@
     pointer-events: none;
 
     z-index: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      align-items: flex-start;
+    }
   }
 
   &__content-title {
