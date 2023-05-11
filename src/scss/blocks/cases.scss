@@ -28,10 +28,11 @@
     z-index: 1;
 
     @include mixins.respond-to(mobileOnly) {
+      min-height: auto;
       background-position: center;
       border-radius: 0;
 
-      padding: 44px 0 51px 0;
+      padding: 45px 0 0 0;
     }
   }
 }
@@ -308,7 +309,12 @@
       }
 
       &:last-child {
+        padding: 0;
         margin: 0;
+
+        &::after {
+          display: none;
+        }
       }
     }
 
@@ -321,9 +327,11 @@
       width: 33%;
 
       @include mixins.respond-to(mobileOnly) {
-        justify-content: center !important;
+        justify-content: flex-start !important;
 
         width: 100%;
+
+        text-align: center;
       }
     }
 
