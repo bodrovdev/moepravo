@@ -116,12 +116,15 @@ window.addEventListener('load', () => {
   }
 });
 
-// --- Анимация на странице услуги
+// --- Анимации на странице услуги
 window.addEventListener('load', () => {
   if (document.querySelector('.single-services__features-item') === null) {
     return;
   }
   else {
+
+    document.querySelector('.single-services__heading-img-container').classList.add('single-services__heading-img-container--active');
+
     let services_items = document.querySelectorAll('.single-services__features-item');
 
     services_items.forEach((item) => {
