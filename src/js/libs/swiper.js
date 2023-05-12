@@ -15,8 +15,8 @@ function index_features_slider() {
           320: {
             slidesPerView: 1
           },
-          767: {
-            slidesPerView: "auto"
+          768: {
+            slidesPerView: 2,
           }
         },
 
@@ -54,8 +54,8 @@ function index_about_slider() {
           320: {
             slidesPerView: 1
           },
-          767: {
-            slidesPerView: "auto"
+          768: {
+            slidesPerView: 2,
           }
         },
       });
