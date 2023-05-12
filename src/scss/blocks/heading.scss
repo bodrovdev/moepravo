@@ -154,6 +154,11 @@
     @include mixins.respond-to(tabletOnly) {
       align-items: flex-start;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      align-items: flex-end;
+      text-align: right;
+    }
   }
 
   &__content-title {
@@ -176,6 +181,11 @@
       line-height: 85px;
 
       margin: 0 0 50px 0;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      font-size: 100px;
+      line-height: 105px;
     }
   }
 
@@ -247,5 +257,9 @@
 
     width: 100%;
     max-width: 683px;
+
+    @include mixins.respond-to(onlyDesktopS) {
+      justify-content: flex-end;
+    }
   }
 }

@@ -17,6 +17,9 @@ function index_features_slider() {
           },
           768: {
             slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
           }
         },
 
@@ -56,6 +59,9 @@ function index_about_slider() {
           },
           768: {
             slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
           }
         },
       });

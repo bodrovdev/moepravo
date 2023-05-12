@@ -34,6 +34,10 @@
     @include mixins.respond-to(tabletOnly) {
       flex-direction: column;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -59,6 +63,14 @@
 
         margin: 0 0 40px 0;
       }
+
+      @include mixins.respond-to(onlyDesktopS) {
+        justify-content: space-between;
+
+        width: 100%;
+
+        margin: 0 0 40px 0;
+      }
     }
 
     &--right {
@@ -73,6 +85,13 @@
       }
 
       @include mixins.respond-to(tabletOnly) {
+        width: 100%;
+        min-height: auto;
+      }
+
+      @include mixins.respond-to(onlyDesktopS) {
+        gap: 20px;
+
         width: 100%;
         min-height: auto;
       }
@@ -102,6 +121,14 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--color-white);
+
+    transition: color 0.1s;
+
+    &:hover {
+      color: var(--color-torea-bay);
+
+      transition: color 0.1s;
+    }
   }
 
   &__column-top {
@@ -138,6 +165,18 @@
     display: flex;
     align-items: center;
     gap: 29px;
+
+    &:hover {
+      & .fake-footer__link-text {
+        color: var(--color-torea-bay);
+        transition: color 0.3s;
+      }
+
+      & .fake-footer__link-icon {
+        transform: rotate(-90deg);
+        transition: transform 0.3s;
+      }
+    }
   }
 
   &__link-text {
@@ -146,6 +185,12 @@
     line-height: 55px;
     color: var(--color-white);
     text-transform: uppercase;
+
+    transition: color 0.3s;
+  }
+
+  &__link-icon {
+    transition: transform 0.3s;
   }
 
   @media (min-width:320px) and (max-width:399px) {
@@ -184,16 +229,47 @@
     @include mixins.respond-to(tabletOnly) {
       justify-content: space-between;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      justify-content: space-between;
+    }
   }
 
   &__copyright {
     text-transform: uppercase;
   }
 
+  .fake-footer__policy {
+    &:hover {
+      color: var(--color-torea-bay);
+      transition: color 0.1s;
+    }
+  }
+
   &__isart {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    &:hover {
+      & .fake-footer__isart-text {
+        color: var(--color-torea-bay);
+        transition: color 0.1s;
+      }
+
+      & .fake-footer__isart-icon {
+        filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(2959%) hue-rotate(224deg) brightness(94%) contrast(94%);
+        transition: filter 0.1s;
+      }
+    }
+  }
+
+  &__isart-text {
+    transition: color 0.1s;
+  }
+
+  &__isart-icon {
+    transition: filter 0.1s;
   }
 
   &__copyright,
