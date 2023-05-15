@@ -19,6 +19,56 @@ burger.addEventListener('click', () => {
     }())
 })
 
+// --- Модальное окно
+window.addEventListener('load', () => {
+  if (document.querySelector('#feedback') === null) {
+    return;
+  }
+  else {
+    let modal_form = document.getElementById('feedback_form');
+    let modal = document.getElementById('modal');
+    let modal_close = document.getElementById('modal_close');
+
+    modal_form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal.classList.add('modal--active');
+      lock(modal);
+    })
+
+    modal_close.addEventListener('click', () => {
+      modal.classList.remove('modal--active');
+      unlock(modal);
+    })
+
+    modal.addEventListener('click', (e) => {
+      if (e.target !== e.currentTarget) {
+        return;
+      }
+      else {
+        modal.classList.remove('modal--active');
+        unlock(modal);
+      }
+    })
+  }
+})
+
+// --- Кнопка "консультация"
+window.addEventListener('load', () => {
+  let feedback_links = document.querySelectorAll('#feedback_link');
+
+  if (document.querySelector('.feedback') === null) {
+
+    feedback_links.forEach((link) => {
+      link.setAttribute('href', '<?php echo get_home_url(); ?>#feedback');
+    })
+  }
+  else {
+    feedback_links.forEach((link) => {
+      link.setAttribute('href', '#feedback');
+    })
+  }
+})
+
 // --- Бегущая строка
 window.addEventListener('load', () => {
   if (document.querySelector('.marquee') === null) {

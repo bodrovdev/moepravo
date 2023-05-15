@@ -20,6 +20,19 @@
 
 <body>
 
+  <div class="modal" id="modal">
+    <div class="modal__wrapper">
+      <button class="modal__close follow-change base-button" id="modal_close">
+        <svg class="modal__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal__inner">
+        <span class="modal__success-text">Спасибо, ваша заявка отправлена</span>
+      </div>
+    </div>
+  </div>
+
   <header class="page-header">
 
     <div class="page-header__inline">
@@ -32,7 +45,7 @@
             <span class="page-header__burger-caption" data-burger-caption="Закрыть">Меню</span>
           </div>
         </div>
-        <button class="page-header__inline-callback page-button base-button" type="button">Консультация</button>
+        <a class="page-header__inline-callback page-button base-link" id="feedback_link" href="#">Консультация</a>
       </div>
     </div>
 

@@ -102,6 +102,7 @@ function services_tabs_slider() {
         //     slidesPerView: 3,
         //   }
         // },
+
       });
     }
   } else if (services_tabs_init) {

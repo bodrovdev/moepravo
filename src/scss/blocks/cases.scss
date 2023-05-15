@@ -90,6 +90,10 @@
       gap: 30px;
     }
 
+    @include mixins.respond-to(onlyDesktopD) {
+      gap: 10px;
+    }
+
     &-item {
       position: relative;
 
@@ -132,6 +136,10 @@
         & .cases__item-icon--blue {
           display: none;
         }
+      }
+
+      @include mixins.respond-to(onlyDesktopD) {
+        width: 50%;
       }
 
       &--active {
