@@ -73,3 +73,41 @@ function index_about_slider() {
 }
 index_about_slider();
 window.addEventListener("resize", index_about_slider);
+
+// --- Слайдер на странице отдельной услуги
+var services_tabs_init = false;
+
+function services_tabs_slider() {
+  if (window.innerWidth <= 1279) {
+    if (!services_tabs_init) {
+      services_tabs_init = true;
+      var services_tabs_slider = new Swiper(".single-services__tabs-slider", {
+        direction: "horizontal",
+        spaceBetween: 20,
+        slidesPerView: "auto",
+
+        pagination: {
+          el: ".single-services__tabs-slider-pagination",
+          clickable: true,
+        },
+
+        // breakpoints: {
+        //   320: {
+        //     slidesPerView: 1
+        //   },
+        //   768: {
+        //     slidesPerView: 2,
+        //   },
+        //   1024: {
+        //     slidesPerView: 3,
+        //   }
+        // },
+      });
+    }
+  } else if (services_tabs_init) {
+    services_tabs_slider.destroy();
+    services_tabs_init = false;
+  }
+}
+services_tabs_slider();
+window.addEventListener("resize", services_tabs_slider);

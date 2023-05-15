@@ -58,8 +58,8 @@ window.addEventListener('load', () => {
 
     // - Второй элемент - 1
     let img_3_1_tl = gsap.timeline({ repeat: -1 });
-    img_3_1_tl.add(gsap.to(img_3_1, { x: 280, duration: 10, ease: "power1", delay: -1, }));
-    img_3_1_tl.add(gsap.to(img_3_1, { zIndex: 4, duration: 0, delay: -1, }));
+    img_3_1_tl.add(gsap.to(img_3_1, { x: 290, duration: 10, ease: "power1", delay: -1, }));
+    img_3_1_tl.add(gsap.to(img_3_1, { zIndex: 4, duration: 0, delay: -2, }));
     img_3_1_tl.add(gsap.to(img_3_1, { x: 0, duration: 10, ease: "power1", delay: -2, }));
 
     // - Второй элемент - 2
