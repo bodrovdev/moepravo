@@ -59,12 +59,22 @@ window.addEventListener('load', () => {
   if (document.querySelector('.feedback') === null) {
 
     feedback_links.forEach((link) => {
-      link.setAttribute('href', '<?php echo get_home_url(); ?>#feedback');
+      // link.setAttribute('href', '<?php echo get_home_url(); ?>#feedback');
+      link.setAttribute('href', `${window.location.origin}/moepravo#feedback`);
     })
   }
   else {
     feedback_links.forEach((link) => {
       link.setAttribute('href', '#feedback');
+      link.addEventListener('click', () => {
+        document.querySelector('.page-header').classList.contains('page-header--active') ?
+          (function () {
+            document.getElementById('burger').classList.remove('main-nav__burger--active');
+            document.querySelector('.page-header').classList.remove('page-header--active')
+            unlock(document.querySelector('.page-header__main-nav'));
+          }()) :
+          console.log('');
+      })
     })
   }
 })
@@ -107,6 +117,8 @@ window.addEventListener('load', () => {
   }
   else {
     let featured_cases = document.querySelectorAll('.cases__featured-item');
+    featured_cases[0].classList.add('cases__featured-item--active');
+
     featured_cases.forEach((item) => {
       item.addEventListener('mouseover', () => {
         if (!item.classList.contains('cases__featured-item--active')) {
